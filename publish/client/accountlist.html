@@ -1,0 +1,34 @@
+<template name='accountlist'>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>我的消费记录</h2>
+				<p><a href="/food">食品类消费</a></p>
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>消费金额</th>
+							<th>消费说明</th>
+							<th>消费日期</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each accounts}}
+						<tr>
+							<td>{{money}}</td>
+							<td>{{memo}}</td>
+							<td>{{createtime}}</td>
+							<td>
+								<span class="glyphicon glyphicon-pencil edit"></span>
+								<span class="glyphicon glyphicon-trash remove"></span>
+							</td>
+						</tr>
+						{{/each}}
+					</tbody>
+					
+				</table>
+				<p><button type="button" class="btn btn-primary btn-small more">更多</button></p>
+			</div>
+		</div>
+	</div>
+</template>
