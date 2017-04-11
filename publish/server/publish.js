@@ -14,4 +14,5 @@ Meteor.publish('accounts',function(options){
 Meteor.publish('accountsInCategory',function(options){
 	var queryCondition={category:options.cate};
 	return AccountBook.find(queryCondition);
+
 });

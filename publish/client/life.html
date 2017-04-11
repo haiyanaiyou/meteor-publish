@@ -1,0 +1,29 @@
+<template name="life">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h3>生活类消费记录</h3>
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<td>消费金额</td>
+							<td>消费说明</td>
+							<td>消费日期</td>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each accounts}}
+						<tr>
+							<td>{{money}}</td>
+							<td>{{memo}}</td>
+							<td>{{createtime}}</td>
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+				<p><a href="/">返回</a></p>
+			</div>
+		</div>
+	</div>
+	
+</template>

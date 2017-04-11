@@ -3,10 +3,17 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h2>我的消费记录</h2>
-				<p><a href="/food">食品类消费</a></p>
+				<p>
+					<a href="/food">食品类消费</a>&nbsp;&nbsp;
+					<a href="/traffic">交通类消费</a>&nbsp;&nbsp;
+					<a href="/life">生活类消费</a>&nbsp;&nbsp;
+					<a href="/add" class="add">添加消费记录</a>
+				</p>
+				
 				<table class="table table-hover">
 					<thead>
 						<tr>
+							<!-- <th>消费类型</th> -->
 							<th>消费金额</th>
 							<th>消费说明</th>
 							<th>消费日期</th>
@@ -15,12 +22,15 @@
 					<tbody>
 						{{#each accounts}}
 						<tr>
+							<!-- <td>{{cate.name}}</td> -->
 							<td>{{money}}</td>
 							<td>{{memo}}</td>
 							<td>{{createtime}}</td>
 							<td>
-								<span class="glyphicon glyphicon-pencil edit"></span>
-								<span class="glyphicon glyphicon-trash remove"></span>
+								<button class="btn btn-danger remove">
+									<i class="glyphicon glyphicon-trash remove"></i> 删除
+								</button>
+								
 							</td>
 						</tr>
 						{{/each}}
@@ -28,6 +38,7 @@
 					
 				</table>
 				<p><button type="button" class="btn btn-primary btn-small more">更多</button></p>
+
 			</div>
 		</div>
 	</div>
